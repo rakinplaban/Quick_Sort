@@ -8,7 +8,8 @@ public class Main {
         int[] arr = {2,8,7,1,3,5,6,4};
         QuickSort quk = new QuickSort(arr);
         quk.quick_Sort(0,arr.length-1);
+
         for(int i : arr)
-            System.out.println(i);
+            System.out.print(i+" ");
     }
 }

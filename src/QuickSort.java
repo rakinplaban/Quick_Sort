@@ -5,10 +5,10 @@ public class QuickSort {
         this.arr = arr;
     }
 
-    private void swap(int i,int j){
-        temp = i;
-        i = j;
-        j = temp;
+    private void swap(int a,int b){
+        temp = arr[a];
+        arr[a] = arr[b];
+        arr[b] = temp;
     }
 
     public void quick_Sort(int p, int r){
@@ -17,9 +17,9 @@ public class QuickSort {
 
             quick_Sort(p, q - 1);
             quick_Sort(q + 1, r);
-
+            //return arr;
         }
-
+        //return arr;
     }
 
     private int partition(int p,int r){
@@ -28,10 +28,10 @@ public class QuickSort {
         for(int j=p; j<r; j++){
             if(arr[j]<=x){
                 i = i+1;
-                swap(arr[i],arr[j]);
+                swap(i,j);
             }
         }
-        swap(arr[i+1],arr[r]);
+        swap(i+1,r);
         return i+1;
     }
 }
